@@ -1,19 +1,15 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class Habit extends Component {
-  state = {
-    count: 0,
-  };
-
-  handleIncrement = (e) => {
+class Habit extends PureComponent {
+  handleIncrement = () => {
     this.props.onIncrement(this.props.habit);
   };
 
-  handleDecrement = (e) => {
+  handleDecrement = () => {
     this.props.onDecrement(this.props.habit);
   };
 
-  handleDelete = (e) => {
+  handleDelete = () => {
     this.props.onDelete(this.props.habit);
   };
 
