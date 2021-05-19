@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './app.css';
 import NavBar from './components/NavBar';
 import Habits from './components/Habits';
+import SimpleHabit from './components/SimpleHabit';
 
 class App extends Component {
   state = {
@@ -58,7 +59,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <NavBar
+        {/* <NavBar
           totalCount={this.state.habits.filter((item) => item.count > 0).length}
         />
 
@@ -69,7 +70,8 @@ class App extends Component {
           onDelete={this.handleDelete}
           onAdd={this.handleAdd}
           onReset={this.handleReset}
-        />
+        /> */}
+        <SimpleHabit />
       </>
     );
   }
